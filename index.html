@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TheDofToca</title>
+  <meta name="description" content="Man is condemned to be free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Spectral:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <audio id="music" src="music.mp3" loop preload="auto"></audio>
+
+  <main class="page">
+
+    <div class="topbar music-controls">
+      <button type="button" class="btn" id="music-toggle">Play music</button>
+      <label class="volume">Volume
+        <input type="range" id="music-volume" min="0" max="1" step="0.05" value="0.4">
+      </label>
+    </div>
+
+    <section class="profile">
+      <div class="avatar-frame">
+        <!-- Your avatar: put an image named avatar.png next to this file.
+             Using a .jpg instead? Change the file name in src below. -->
+        <img id="avatar" src="avatar.png" alt="Avatar of TheDofToca" width="220" height="220">
+      </div>
+      <div class="identity">
+        <h1>TheDofToca</h1>
+        <blockquote>
+          <p>Man is condemned to be free.</p>
+          <footer>Jean-Paul Sartre</footer>
+        </blockquote>
+        <p class="links"><a href="https://github.com/TheDofToca">github.com/TheDofToca</a></p>
+      </div>
+    </section>
+
+    <section class="customize" aria-labelledby="customize-title">
+      <h2 id="customize-title">Make it yours</h2>
+
+      <div class="group" id="cursor-group">
+        <h3>Cursor</h3>
+        <div class="options" id="cursor-options"></div>
+        <label class="btn upload">
+          Upload a cursor image
+          <input type="file" id="cursor-upload" accept="image/*">
+        </label>
+      </div>
+
+      <div class="group">
+        <h3>Snow</h3>
+        <div class="options">
+          <button type="button" class="opt" id="snow-toggle" aria-pressed="true">Snow: on</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn" id="reset">Reset to defaults</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
